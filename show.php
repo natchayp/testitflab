@@ -43,7 +43,7 @@ $res = mysqli_query($conn, 'SELECT * FROM testlabitf');
   <br>
   <br>
 <div class="container">
-<h1 class="display-1">Final LAB</h1>
+<h1 class="display-1">Test Lab</h1>
 </div>
   
 <div class="container">
