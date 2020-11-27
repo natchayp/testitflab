@@ -20,5 +20,13 @@ if (mysqli_query($conn, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
 
-
+mysqli_close($conn);
+if ($done)
+{
+    header("Location: https://testitflabb.azurewebsites.net/show.php");
+    exit();
+}
+?>
+  </div>
+</body>
 ?>
