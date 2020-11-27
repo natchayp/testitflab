@@ -12,7 +12,7 @@ $w = $_POST['weight'];
 $h = $_POST['height'];
 $bmi = $w / ($h ** 2);
 
-$sql = "INSERT INTO testlabitf27 (weight , height , bmi) VALUES ('$w', '$h', '$bmi')";
+$sql = "INSERT INTO testlabitf27 (name, weight , height , bmi) VALUES ('$n, $w', '$h', '$bmi')";
 
 if (mysqli_query($conn, $sql)) {
     echo "OK";
