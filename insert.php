@@ -10,7 +10,7 @@ if (mysqli_connect_errno($conn))
 $n = $_POST['name']
 $w = $_POST['weight'];
 $h = $_POST['height'];
-$bmi = $w / ($h ** 2);
+$bmi = ($w)/(($h/100)*($h/100));
 
 $sql = "INSERT INTO testlabitf27 (name, weight , height , bmi) VALUES ('$n, $w', '$h', '$bmi')";
 
