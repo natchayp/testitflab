@@ -11,4 +11,13 @@ $a = $_POST['A'];
 $b = $_POST['B'];
 $c = $a + $b;
 
+$sql = "INSERT INTO testlabitf (A , B , C) VALUES ('$a', '$b', '$c')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "OK";
+  } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
+  
+
 ?>
