@@ -7,6 +7,7 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
+$n = $_POST['name']
 $w = $_POST['weight'];
 $h = $_POST['height'];
 $bmi = $w / ($h ** 2);
