@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>ITF Lab</title>
+    <title>TEST ITF Lab</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>  
   </head>
@@ -18,7 +18,7 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$res = mysqli_query($conn, 'SELECT * FROM testlabitf');
+$res = mysqli_query($conn, 'SELECT * FROM testlabitf27');
 ?>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
@@ -50,9 +50,10 @@ $res = mysqli_query($conn, 'SELECT * FROM testlabitf');
 <table class="table table-bordered">
   <thead>
     <tr class="alert alert-danger" role="alert">
-      <th> <div align="center">A</div></th>
-      <th> <div align="center">B</div></th>
-      <th> <div align="center">C</div></th>
+      <th> <div align="center">name</div></th>
+      <th> <div align="center">weight</div></th>
+      <th> <div align="center">height</div></th>
+      <th> <div align="center">bmi</div></th>
     </tr>
   </thead>
   
@@ -60,9 +61,10 @@ $res = mysqli_query($conn, 'SELECT * FROM testlabitf');
 <?php while($Result = mysqli_fetch_array($res))
 {?>
     <tr>
-      <td><?php echo $Result['A'];?></td>
-      <td><?php echo $Result['B'];?></td>
-      <td><?php echo $Result['C'];?></td>
+      <td><?php echo $Result['name'];?></td>
+      <td><?php echo $Result['weight'];?></td>
+      <td><?php echo $Result['height'];?></td>
+      <td><?php echo $Result['bmi'];?></td>
     </tr>
 <?php
 }
